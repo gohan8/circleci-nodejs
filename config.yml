@@ -1,0 +1,8 @@
+version: 2.0
+jobs:
+	build:
+		docker:
+			- image: cimg/node:14.10.1	# the primary container, where your job's commands are run
+		steps:
+			- checkout	# checkout code in the project directory
+			- run: node server.js	# run nodejs command - was run: echo "hello world!"
